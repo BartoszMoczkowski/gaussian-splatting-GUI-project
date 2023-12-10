@@ -1,0 +1,8 @@
+build
+dist
+external_tools/ffmpeg
+external_tools/Colmap
+external_tools/ImageMagick-7.1.1-Q16-HDRI
+data    
+output  
+conv_train.spec
