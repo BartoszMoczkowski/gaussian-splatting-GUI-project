@@ -71,7 +71,7 @@
       "url": "https://packages.unity.com"
     },
     "org.nesnausk.gaussian-splatting": {
-      "version": "file:C:/Users/Kamil/Desktop/Gaussian/gaussian-splatting-GUI-project/unity/package",
+      "version": "file:../../package",
       "depth": 0,
       "source": "local",
       "dependencies": {
