@@ -1,6 +1,9 @@
 <ui:UXML xmlns:ui="UnityEngine.UIElements" xmlns:uie="UnityEditor.UIElements" xsi="http://www.w3.org/2001/XMLSchema-instance" engine="UnityEngine.UIElements" editor="UnityEditor.UIElements" noNamespaceSchemaLocation="../../UIElementsSchema/UIElements.xsd" editor-extension-mode="False">
-    <ui:VisualElement style="flex-grow: 1; background-color: rgb(106, 106, 106);">
-        <ui:Button text="Start" parse-escape-sequences="true" display-tooltip-when-elided="true" name="StartButton" style="height: 38px; top: 25%; width: 80%; align-items: auto; align-self: center;" />
-        <ui:Button text="Exit" parse-escape-sequences="true" display-tooltip-when-elided="true" name="ExitButton" style="top: 40%; align-self: center; width: 80%;" />
+    <ui:VisualElement style="flex-grow: 1; background-color: rgb(106, 106, 106); color: rgb(64, 64, 64);">
+        <ui:Button text="Start" parse-escape-sequences="true" display-tooltip-when-elided="true" name="StartButton" style="height: 8%; top: 12.5%; width: 80%; align-items: auto; align-self: center; position: absolute; font-size: 20%;" />
+        <ui:Button text="Generate Model" parse-escape-sequences="true" display-tooltip-when-elided="true" name="GenerateButton" style="top: 25%; width: 80%; align-self: center; height: 8%; position: absolute; font-size: 20%;" />
+        <ui:Button text="Tutorial" parse-escape-sequences="true" display-tooltip-when-elided="true" name="TutorialButton" style="top: 37.5%; height: 8%; width: 80%; align-self: center; position: absolute; font-size: 20%;" />
+        <ui:Button text="About the Project" parse-escape-sequences="true" display-tooltip-when-elided="true" name="AboutButton" style="position: absolute; top: 50%; height: 8%; width: 80%; align-self: center; font-size: 20%;" />
+        <ui:Button text="Exit" parse-escape-sequences="true" display-tooltip-when-elided="true" name="ExitButton" style="top: 62.5%; align-self: center; width: 80%; position: relative; height: 8%; font-size: 20%;" />
     </ui:VisualElement>
 </ui:UXML>

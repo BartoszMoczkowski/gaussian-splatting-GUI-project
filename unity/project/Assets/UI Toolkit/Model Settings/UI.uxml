@@ -1,0 +1,7 @@
+<ui:UXML xmlns:ui="UnityEngine.UIElements" xmlns:uie="UnityEditor.UIElements" xsi="http://www.w3.org/2001/XMLSchema-instance" engine="UnityEngine.UIElements" editor="UnityEditor.UIElements" noNamespaceSchemaLocation="../../UIElementsSchema/UIElements.xsd" editor-extension-mode="False">
+    <Style src="project://database/Assets/UI%20Toolkit/Model%20Settings/StyleSheet.uss?fileID=7433441132597879392&amp;guid=508e8544e30916946bca5195d8989422&amp;type=3#StyleSheet" />
+    <ui:VisualElement name="DisplayStyleBackground" style="flex-grow: 1; width: 100%; height: 100%; bottom: 5%; top: 0; background-color: rgb(84, 84, 84); max-height: 10%; align-self: flex-start; font-size: 8px; -unity-text-align: middle-center; -unity-text-outline-color: rgba(0, 0, 0, 0); color: rgb(0, 0, 0);">
+        <ui:DropdownField label="Display Style" index="-1" choices="Splats, Nodes" name="DisplayStylePicker" style="width: 90%; height: 50%; color: rgb(255, 255, 255); align-self: center; top: 0; bottom: auto; align-items: center; justify-content: flex-start; -unity-text-align: middle-center; font-size: 11px; margin-top: 0; margin-right: 0; margin-bottom: 0; margin-left: 0;" />
+        <ui:DropdownField label="Model" index="-1" name="ModelPicker" choices="1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20" style="width: 90%; height: 50%; align-self: center; color: rgb(255, 255, 255); -unity-text-align: middle-center; font-size: 11px; top: 0; margin-top: 0; margin-right: 0; margin-bottom: 0; margin-left: 0;" />
+    </ui:VisualElement>
+</ui:UXML>

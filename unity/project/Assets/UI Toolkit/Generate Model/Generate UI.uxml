@@ -1,0 +1,10 @@
+<ui:UXML xmlns:ui="UnityEngine.UIElements" xmlns:uie="UnityEditor.UIElements" xsi="http://www.w3.org/2001/XMLSchema-instance" engine="UnityEngine.UIElements" editor="UnityEditor.UIElements" noNamespaceSchemaLocation="../../UIElementsSchema/UIElements.xsd" editor-extension-mode="False">
+    <ui:VisualElement style="flex-grow: 1; background-color: rgb(84, 84, 84); color: rgb(64, 64, 64);">
+        <ui:Label tabindex="-1" text="RENDER YOUR IMAGE" parse-escape-sequences="true" display-tooltip-when-elided="true" name="Label" style="color: rgb(255, 255, 255); font-size: 40px; -unity-text-align: middle-center; width: 50%; align-self: center; top: 30%; position: absolute;" />
+        <ui:Button parse-escape-sequences="true" display-tooltip-when-elided="true" name="MenuButton" style="width: 9%; height: 16%; align-self: flex-end;" />
+    </ui:VisualElement>
+    <ui:VisualElement name="VisualElement" style="flex-grow: 1; width: 30%; height: 20%; position: absolute; top: 50%; left: auto; align-self: center; background-color: rgb(255, 255, 255);">
+        <ui:Button text="FORMAT" parse-escape-sequences="true" display-tooltip-when-elided="true" style="background-color: rgb(96, 20, 188); color: rgb(255, 255, 255); height: 7%; width: 50%; top: auto; position: absolute; left: 0; bottom: 0; margin-top: 0; margin-right: 0; margin-bottom: 0; margin-left: 0;" />
+        <ui:Button text="OK" parse-escape-sequences="true" display-tooltip-when-elided="true" style="background-color: rgb(255, 188, 92); color: rgb(255, 255, 255); height: 7%; top: auto; position: absolute; right: 0; left: auto; width: 50%; bottom: 0; margin-top: 0; margin-right: 0; margin-bottom: 0; margin-left: 0;" />
+    </ui:VisualElement>
+</ui:UXML>
