@@ -1,7 +1,0 @@
-<ui:UXML xmlns:ui="UnityEngine.UIElements" xmlns:uie="UnityEditor.UIElements" xsi="http://www.w3.org/2001/XMLSchema-instance" engine="UnityEngine.UIElements" editor="UnityEditor.UIElements" noNamespaceSchemaLocation="../../UIElementsSchema/UIElements.xsd" editor-extension-mode="False">
-    <Style src="project://database/Assets/UI%20Toolkit/StyleSheet.uss?fileID=7433441132597879392&amp;guid=508e8544e30916946bca5195d8989422&amp;type=3#StyleSheet" />
-    <ui:VisualElement name="DisplayStyleBackground" style="flex-grow: 1; width: 100%; height: 5%; bottom: 5%; top: 0; background-color: rgb(0, 0, 163); max-height: 10%; align-self: flex-start; font-size: 8px; -unity-text-align: middle-center;">
-        <ui:DropdownField label="Display Style" index="-1" choices="Splats, Nodes" name="DisplayStylePicker" style="width: 90%; height: 13px; color: rgb(255, 255, 255); align-self: center; top: 0; bottom: auto; align-items: center; justify-content: flex-start; -unity-text-align: middle-center; font-size: 11px;" />
-        <ui:DropdownField label="Model" index="-1" choices="Flowers, Bicycle" name="ModelPicker" style="width: 90%; height: 13px; align-self: center; color: rgb(255, 255, 255); -unity-text-align: middle-center; font-size: 11px;" />
-    </ui:VisualElement>
-</ui:UXML>
