@@ -34,6 +34,6 @@ This will create the executable version in the `dist\conv_train` folder
 To run the main program call 
 
 ```
-dist\conv_train.py -s {path to video file}
+dist\conv_train\conv_train.exe -s {path to video file}
 ```
 
