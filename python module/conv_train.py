@@ -314,10 +314,10 @@ if __name__ == "__main__":
     
     path_to_program = os.path.dirname(os.path.abspath(__file__))
 
-    print(find_file('COLMAP.bat',path_to_program + '\\..\\..'))
-    COLMAP_PATH = find_file('COLMAP.bat',path_to_program + '\\..\\..')
-    FFMPEG_PATH = find_file('ffmpeg.exe',path_to_program + '\\..\\..')
-    IMG_MAGICK_PATH = find_file('magick.exe',path_to_program + '\\..\\..')
+    print(find_file('COLMAP.bat',path_to_program + '\\..\\..\\..'))
+    COLMAP_PATH = find_file('COLMAP.bat',path_to_program + '\\..\\..\\..')
+    FFMPEG_PATH = find_file('ffmpeg.exe',path_to_program + '\\..\\..\\..')
+    IMG_MAGICK_PATH = find_file('magick.exe',path_to_program + '\\..\\..\\..')
     print(FFMPEG_PATH)
     parser = ArgumentParser("FFmpeg video to image parser")
     parser.add_argument("--source_path", "-s", required=True, type=str)

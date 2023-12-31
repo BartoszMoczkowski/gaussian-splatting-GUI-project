@@ -2,10 +2,16 @@ using System.Collections.Generic;
 using UnityEngine;
 using System.Linq;
 using B83.Win32;
+using System;
+using System.Diagnostics;
 
 
 public class FileDragAndDrop : MonoBehaviour
 {
+    //string m_path = Application.dataPath;
+    //string g_path = Environment.CurrentDirectory;
+
+
     List<string> log = new List<string>();
     void OnEnable ()
     {
@@ -24,8 +30,11 @@ public class FileDragAndDrop : MonoBehaviour
         // mouse position within the window where the files has been dropped.
         string str = "Dropped " + aFiles.Count + " files at: " + aPos + "\n\t" +
             aFiles.Aggregate((a, b) => a + "\n\t" + b);
-        Debug.Log(str);
+       /// UnityEngine.Debug.Log(m_path);
+        //UnityEngine.Debug.Log(g_path);
+        UnityEngine.Debug.Log(str);
         log.Add(str);
+        Process.Start(@"..\..\dist\conv_train\conv_train.exe -" + str);
     }
 
     private void OnGUI()
