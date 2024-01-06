@@ -8,6 +8,7 @@ using UnityEngine.Experimental.Rendering;
 
 namespace GaussianSplatting.Runtime
 {
+    [Serializable]
     public class GaussianSplatAsset : ScriptableObject
     {
         public const int kCurrentVersion = 20231006;
