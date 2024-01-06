@@ -31,6 +31,11 @@ using System.Runtime.Serialization;
 //######   #######   ## ##   #     #  #     #  #######      #     #  #######  #######      #     #  #######  #     #     #     #     #  #######   #####  
 
 // This is all terrible coding, do not try to understand and do not copy for your own sanity
+
+//For those who are brave here is a TLDR
+//Essential we want to move the Gaussian Asset creator tool from the editor to the build. However, there are a few obstacles in the way. First the creator depends on a bunch of stuff tied to Editor. We can remove most of it without any issues but one thing is 
+// a big problem. Assets. The original uses assets to store the generated data, this however is not possible in builds as we obviously cannot make assets while the program runs. As such the only solution is to move to JSON. Before fixing this I had never done 
+// anything with JSONS and Unity and this is the result. The code could and should be split between modules, but I don't have enough time. All bizzare choices in the code below are caused by these limitations. Good luck.
 public class FileDragAndDrop : MonoBehaviour
 {
 
@@ -124,8 +129,6 @@ public class FileDragAndDrop : MonoBehaviour
             GUILayout.Label(s);
     }
 
-
-    // Mortals beware
 
 
     void ApplyQualityLevel()
