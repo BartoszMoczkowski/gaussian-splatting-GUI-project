@@ -8,20 +8,26 @@ using System.IO;
 
 public class DisplayStyleController : MonoBehaviour
 {
-    UIDocument dropdownDoc;
+    UIDocument uidoc;
     DropdownField stylePicker;
     DropdownField modelPicker;
     GaussianSplatRenderer splatScene;
+
+    FlyCamera cameraScript;
+    GameObject container;
 
     public List<string> cloudList = new List<string>();
     int prev_i = -1;
 
     private void OnEnable()
     {
-        dropdownDoc = GetComponent<UIDocument>();
+        cameraScript = GameObject.Find("Main Camera").GetComponent<FlyCamera>();
+        container = GameObject.Find("UIContainer");
 
-        stylePicker = dropdownDoc.rootVisualElement.Q<DropdownField>("DisplayStylePicker");
-        modelPicker = dropdownDoc.rootVisualElement.Q<DropdownField>("ModelPicker");
+        uidoc = GameObject.Find("UIDocument").GetComponent<UIDocument>();
+
+        stylePicker = uidoc.rootVisualElement.Q<DropdownField>("DisplayStylePicker");
+        modelPicker = uidoc.rootVisualElement.Q<DropdownField>("ModelPicker");
 
         splatScene = GameObject.Find("GaussianSplats").GetComponent<GaussianSplatRenderer>();
 
@@ -43,9 +49,15 @@ public class DisplayStyleController : MonoBehaviour
 
     void Update()
     {
-        if (Input.GetKeyDown("escape"))
+        if (Input.GetKeyDown("m"))
         {
             SceneManager.LoadScene("Menu");
+        }
+
+        if (Input.GetKeyDown("h"))
+        {
+            cameraScript.enabled = true;
+            container.SetActive(false);
         }
 
 

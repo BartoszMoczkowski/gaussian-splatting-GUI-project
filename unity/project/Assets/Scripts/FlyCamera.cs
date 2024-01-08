@@ -1,5 +1,7 @@
 using UnityEngine;
 using System.Collections;
+using UnityEngine.SceneManagement;
+using UnityEngine.UIElements;
 
 public class FlyCamera : MonoBehaviour
 {
@@ -9,20 +11,27 @@ public class FlyCamera : MonoBehaviour
     public float dampingCoefficient = 5; // how quickly you break to a halt after you stop your input
     public bool focusOnEnable = true; // whether or not to focus and lock cursor immediately on enable
 
+    FlyCamera cameraScript;
+    GameObject container;
+
     Vector3 velocity; // current velocity
 
     static bool Focused
     {
-        get => Cursor.lockState == CursorLockMode.Locked;
+        get => UnityEngine.Cursor.lockState == CursorLockMode.Locked;
         set
         {
-            Cursor.lockState = value ? CursorLockMode.Locked : CursorLockMode.None;
-            Cursor.visible = value == false;
+            UnityEngine.Cursor.lockState = value ? CursorLockMode.Locked : CursorLockMode.None;
+            UnityEngine.Cursor.visible = value == false;
         }
     }
 
     void OnEnable()
     {
+        cameraScript = GetComponent<FlyCamera>();
+        container = GameObject.Find("UIContainer");
+        container.SetActive(false);
+
         if (focusOnEnable) Focused = true;
     }
 
@@ -30,6 +39,17 @@ public class FlyCamera : MonoBehaviour
 
     void Update()
     {
+        if (Input.GetKeyDown("m"))
+        {
+            SceneManager.LoadScene("Menu");
+        }
+
+        if (Input.GetKeyDown("h"))
+        {
+            cameraScript.enabled = false;
+            container.SetActive(true);
+        }
+
         // Input
         if (Focused)
             UpdateInput();
